@@ -23,8 +23,10 @@ const useStyles = makeStyles(styles);
 export default function Components(props) {
 	const classes = useStyles();
 	const { ...rest } = props;
-	console.log("===>", props.location.pathname.replace("/", ""));
-	const locale = props.location.pathname.replace("/", "");
+	const locale =
+		props.location?.pathname?.replace("/", "") !== ""
+			? props.location?.pathname?.replace("/", "")
+			: "en";
 	return (
 		<div style={{ width: "70%", margin: "0 auto" }}>
 			<Header
@@ -36,6 +38,7 @@ export default function Components(props) {
 					height: 400,
 					color: "white",
 				}}
+				locale={locale}
 				{...rest}
 			/>
 			<Parallax image={require("assets/img/bg4.jpg")}>

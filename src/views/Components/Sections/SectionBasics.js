@@ -152,7 +152,8 @@ export default function SectionBasics(props) {
 				<div>
 					<ReactPlayer
 						url="https://www.youtube.com/watch?v=pPteSaRU4Pk"
-						// width="100%"
+						width={window.innerWidth <= 500 ? "max-content" : 640}
+						height={window.innerWidth <= 500 ? "max-content" : 360}
 					/>
 				</div>
 			</Grid>

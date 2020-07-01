@@ -49,6 +49,15 @@ export default function HeaderLinks(props) {
 					]}
 				/>
 			</ListItem>
+			<ListItem className={classes.listItem}>
+				<Link
+					to={`/${locale}/about`}
+					className={classes.navLink}
+					style={{ fontWeight: "500", justifyContent: "center" }}
+				>
+					About us
+				</Link>
+			</ListItem>
 			{links.tw && (
 				<ListItem className={classes.listItem}>
 					<Tooltip
