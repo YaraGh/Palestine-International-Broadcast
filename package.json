@@ -41,8 +41,8 @@
 	},
 	"scripts": {
 		"start": "node server.js",
-		"heroku-postbuild": "npm run build",
 		"build": "react-scripts build && gulp licenses",
+		"heroku-postbuild": "npm install --only=dev && npm install && npm run build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
 		"lint:check": "eslint . --ext=js,jsx;  exit 0",
